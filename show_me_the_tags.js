@@ -25,6 +25,7 @@ function prepend_infos(page_title, description, tags){
   var oDiv = document.createElement('div');
   var strInnerHTML = '<ul><li>Page Title : ' + page_title + '</li><li>description: ' + description + '</li><li>태그 : '+ tags + '</li></ul>';
   oDiv.innerHTML = strInnerHTML;
+  oDiv.style.cssText = "color: blue; border: 1px solid black";
   var oDivInfo = document.querySelectorAll('#wrap > div > div.prd_detail_basic > div.info')[0];
   oDivInfo.prepend(oDiv);
 }
