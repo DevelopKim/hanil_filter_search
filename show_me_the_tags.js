@@ -21,4 +21,15 @@ function get_search_tags(){
   return tags;
 }
 
-console.log(get_search_tags());
+function prepend_infos(page_title, description, tags){
+  var oDiv = document.createElement('div');
+  var strInnerHTML = '<ul><li>Page Title : ' + page_title + '</li><li>description: ' + description + '</li><li>태그 : '+ tags + '</li></ul>';
+  oDiv.innerHTML = strInnerHTML;
+  var oDivInfo = document.querySelectorAll('#wrap > div > div.prd_detail_basic > div.info')[0];
+  oDivInfo.prepend = oDiv;
+}
+
+var page_title = get_page_title();
+var description = get_description();
+var tags = get_search_tags();
+prepend_infos(page_title, description, tags);
