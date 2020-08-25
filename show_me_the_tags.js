@@ -27,6 +27,7 @@ function prepend_infos(page_title, description, tags){
   oDiv.innerHTML = strInnerHTML;
   oDiv.style.cssText = "color: blue; border: 1px solid black";
   var oDivInfo = document.querySelectorAll('#wrap > div > div.prd_detail_basic > div.info')[0];
+  if( oDivInfo == undefined ) oDivInfo = document.querySelectorAll('#content > div > div.prd_detail_basic > div.info')[0];
   oDivInfo.prepend(oDiv);
 }
 
