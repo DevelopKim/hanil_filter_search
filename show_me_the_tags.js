@@ -11,7 +11,7 @@ function get_description(){
 
 //get search tags string
 function get_search_tags(){
-  var goods_tags = document.querySelectorAll('div.goods_tag > ul > li > a')
+  var goods_tags = document.querySelectorAll('#INTRODUCE > div > div > ul > li > a');
   var tags = '';
   goods_tags.forEach(function(e, i) {
   var tmp_str = e.innerHTML.replace('#', '');
